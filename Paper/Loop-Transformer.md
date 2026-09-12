@@ -95,12 +95,15 @@ $$
 và
 
 $$
+
 \operatorname{Attention}(Q,K,V)
+
 =
 \operatorname{softmax}
 \left(
 \frac{QK^\top}{\sqrt{d_k}}+M_{\text{causal}}
 \right)V .
+
 $$
 
 Official implementation dựa trên NanoGPT/GPT-2, dùng causal scaled-dot-product self-attention; nếu PyTorch hỗ trợ thì gọi `scaled_dot_product_attention`, nếu không thì thực hiện masked softmax theo cách thông thường.  
